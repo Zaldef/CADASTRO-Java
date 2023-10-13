@@ -1,37 +1,47 @@
 public class ClasseProdutos {
+    private static int proximoId = 1;
     private String descricao;
     private int id;
     private double valor;
-    private int quantidade;
+    private int quantidade = 0;
     
-    public ClasseProdutos(String descricao, int valor){
-        this.descricao = descricao;
-        this.valor = valor;
+        public ClasseProdutos(String descricao, double valor){
+            this.descricao = descricao;
+            this.valor = valor;
+            
+            // Atribui o valor do atributo id ao atributo proximoId
+            this.id = proximoId; 
+            proximoId++;
 
+            // Quantidade de produtos criados
+            quantidade++;
+        }
         public String getDescricao(){
             return descricao;
         }
         public int getId(){
-
+            return id;
         }
         public double getValor(){
-
+            return valor;
         }
         public int getQuantidade(){
-
+            return quantidade;
         }
-        public String setDescricao(String descricao){
-
+        
+        // Funções do tipo set não possui retorno. Portanto, são void's.
+        public void setDescricao(String descricao){
+            this.descricao = descricao;
         }
-        public int setId(int id){
-
+        public void setId(int id){
+            this.id = id;
         }
-        public double setValor(double valor){
-
+        public void setValor(double valor){
+            this.valor = valor;
         }
         public String toString(){
-            System.out.println("Valores dos Produtos...");
+            return "\n\tValores dos Produtos: \n" + "Descricao: " + descricao + "\n" + "Id: " + id + "\n" + "Valor: R$" + valor + "\n";
         }
-    }
+    
     
 }
