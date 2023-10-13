@@ -40,7 +40,7 @@ public class ClasseProdutos {
             this.valor = valor;
         }
         public String toString(){
-            return "\n\tValores dos Produtos: \n" + "Descricao: " + descricao + "\n" + "Id: " + id + "\n" + "Valor: R$" + valor + "\n";
+            return "\n\tInformacao do Produto " + id +": \n" + "Descricao: " + descricao + "\n" + "Valor: R$" + valor + "\n";
         }
     
     
